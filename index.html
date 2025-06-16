@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KvassMaster Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="#home" class="logo-link">
+                    <img src="img/kvas-logo.png" alt="КВАС" class="logo-image" style="height:250px;width:auto;object-fit:contain;display:block;">
+                </a>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="menu" id="menu">
+                <li><a href="#home"><i class="fas fa-home"></i> <span data-lang="nav-home">Главная</span></a></li>
+                <li><a href="#about"><i class="fas fa-beer"></i> <span data-lang="nav-about">О квасе</span></a></li>
+                <li><a href="#model"><i class="fas fa-cube"></i> <span data-lang="nav-model">3D Модель</span></a></li>
+                <li class="language-switcher">
+                    <button id="langToggle" class="lang-btn">
+                        <i class="fas fa-globe"></i> <span data-lang="language">RU</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-lang="hero-title">Традиционный Русский Квас</h1>
+            <p data-lang="hero-subtitle">Погрузитесь в историю и культуру русского кваса</p>
+            <button class="cta-button" onclick="scrollToModel()"><span data-lang="hero-cta">Посмотреть 3D модель</span></button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-lang="about-title">О Квасе</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-lang="about-p1">Квас — традиционный славянский напиток, получаемый путем естественного брожения. История кваса насчитывает более 1000 лет, и он всегда считался не только освежающим напитком, но и источником витаминов и полезных веществ.</p>
+                    <p data-lang="about-p2">В советское время бочки с квасом были неотъемлемой частью городских пейзажей, особенно в летний период. Эти характерные желтые бочки можно было встретить на улицах городов и деревень.</p>
+                    
+                    <h3><i class="fas fa-history"></i> <span data-lang="history-title">История кваса</span></h3>
+                    <p data-lang="history-text">Первые упоминания о квасе на Руси относятся к 989 году. После крещения Руси князь Владимир приказал раздать народу "пищу, мед и квас". С тех пор квас стал национальным напитком, который готовили в каждом доме.</p>
+                    
+                    <h3><i class="fas fa-flask"></i> <span data-lang="composition-title">Состав и производство</span></h3>
+                    <p data-lang="composition-text">Классический квас готовится из ржаного хлеба или ржаной муки, солода и воды. В процессе брожения образуются молочная кислота, спирт (не более 1,2%) и углекислый газ, придающие квасу характерный вкус и свойства. Современные производители часто добавляют различные натуральные добавки: мед, ягоды, фрукты и травы.</p>
+                    
+                    <h3><i class="fas fa-heartbeat"></i> <span data-lang="benefits-title">Польза кваса</span></h3>
+                    <p data-lang="benefits-text">Квас богат витаминами группы B, аминокислотами и микроэлементами. Он улучшает пищеварение, нормализует микрофлору кишечника, повышает иммунитет и помогает справиться с усталостью. В жаркую погоду квас отлично утоляет жажду и восполняет потерю минеральных веществ.</p>
+                    
+                    <h3><i class="fas fa-seedling"></i> <span data-lang="firstkvass-title">Первоквас</span></h3>
+                    <p data-lang="firstkvass-text">Первоквас — это первая порция кваса, получаемая при брожении. Он считается наиболее ценным и полезным, так как содержит максимальную концентрацию полезных веществ и микроорганизмов. В старину первоквас часто использовали в лечебных целях и для приготовления особых блюд. Традиционно первоквас имеет более насыщенный вкус, аромат и целебные свойства по сравнению с последующими порциями напитка.</p>
+                    
+                    <div class="image-container">
+                        <img src="img/kvas.png" alt="Квас" class="about-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="model" class="model-section">
+        <div class="container">
+            <h2 data-lang="model-title">3D Модель Бочки Кваса</h2>
+            <div class="model-container">
+                <iframe id="sketchfabModel" title="Бочка кваса" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            </div>
+            <div class="model-info">
+                <p>
+                    <span data-lang="model-description">Эта 3D модель представляет типичную бочку кваса, которая использовалась для продажи напитка на улицах советских городов.</span>
+                    <span data-lang="model-author-prefix">Модель создана автором</span>
+                    <a href="https://sketchfab.com/barracudazp" target="_blank">barracudazp</a>
+                </p>
+                <p><a href="https://sketchfab.com/3d-models/kvass-barrel-c4958926b88c4b918d0a902f0628b6c7" target="_blank" data-lang="model-link">Оригинальная модель на Sketchfab</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/NikitaZaporochec" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github"></i> GitHub
+            </a>        
+            <div class="container">
+                <p data-lang="copyright">© 2025 KvassMaster. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
+    <script src="lang.js"></script>
+    <script src="language-switcher.js"></script>
+</body>
+</html> 
